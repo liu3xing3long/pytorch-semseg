@@ -1,6 +1,10 @@
 # pytorch-semseg
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/meetshah1995/pytorch-semseg/blob/master/LICENSE)
+[![pypi](https://img.shields.io/pypi/v/pytorch_semseg.svg)](https://pypi.python.org/pypi/pytorch-semseg/0.1.2)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1185075.svg)](https://doi.org/10.5281/zenodo.1185075)
+
+
 
 ## Semantic Segmentation Algorithms Implemented in PyTorch
 
@@ -15,18 +19,19 @@ This repository aims at mirroring popular semantic segmentation architectures in
 
 ### Networks implemented
 
-* [Segnet](https://arxiv.org/abs/1511.00561) - With Unpooling using Maxpool indices
-* [FCN](https://arxiv.org/abs/1411.4038) - All 1( FCN8s), 2 (FCN16s) and 3 (FCN8s) stream variants
-* [U-Net](https://arxiv.org/abs/1505.04597) - With optional deconvolution and batchnorm
-* [Link-Net](https://codeac29.github.io/projects/linknet/)
+* [PSPNet](https://arxiv.org/abs/1612.01105) - With support for loading pretrained models w/o caffe dependency
+* [ICNet](https://arxiv.org/pdf/1704.08545.pdf) - With optional batchnorm and pretrained models
 * [FRRN](https://arxiv.org/abs/1611.08323) - Model A and B
+* [FCN](https://arxiv.org/abs/1411.4038) - All 1 (FCN32s), 2 (FCN16s) and 3 (FCN8s) stream variants
+* [U-Net](https://arxiv.org/abs/1505.04597) - With optional deconvolution and batchnorm
+* [Link-Net](https://codeac29.github.io/projects/linknet/) - With multiple resnet backends
+* [Segnet](https://arxiv.org/abs/1511.00561) - With Unpooling using Maxpool indices
+
 
 #### Upcoming 
 
-* [PSPNet](https://arxiv.org/abs/1612.01105)
 * [E-Net](https://arxiv.org/abs/1606.02147)
 * [RefineNet](https://arxiv.org/abs/1611.06612)
-* [MaskRCNN](https://arxiv.org/abs/1703.06870)
 
 ### DataLoaders implemented
 
@@ -35,12 +40,9 @@ This repository aims at mirroring popular semantic segmentation architectures in
 * [ADE20K](http://groups.csail.mit.edu/vision/datasets/ADE20K/)
 * [MIT Scene Parsing Benchmark](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip)
 * [Cityscapes](https://www.cityscapes-dataset.com/)
-
-#### Upcoming
-
 * [NYUDv2](http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 * [Sun-RGBD](http://rgbd.cs.princeton.edu/)
-* [MS COCO](http://mscoco.org/)
+
 
 ### Requirements
 
@@ -116,7 +118,15 @@ python test.py [-h] [--model_path [MODEL_PATH]] [--dataset [DATASET]]
   --out_path            Path of the output segmap
 ```
 
-### Contributors 
 
-- [josephreisinger](https://github.com/josephreisinger) 
-- [ibadami](https://github.com/ibadami)
+**If you find this code useful in your research, please consider citing:**
+
+```
+@article{mshahsemseg,
+    Author = {Meet P Shah},
+    Title = {Semantic Segmentation Architectures Implemented in PyTorch.},
+    Journal = {https://github.com/meetshah1995/pytorch-semseg},
+    Year = {2017}
+}
+```
+
